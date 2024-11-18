@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/* Base page styles */
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #99C4C3;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  border: 2px solid #36454f80;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 270px;
+  width: 650px;
+}
+
+.col-box {
+  padding: 8px;
+  z-index: 10;
+}
+
+.hero-image {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  color: #36454f;
+}
+
+
+p {
+  font-weight: 500px;
+  color: black;
+}
+
+li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/* Base Button Style */
+
+.btn {
+  position: relative;
+  display: block;
+  width: 250px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #006B69;
+  border: 1px solid #ccc;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform-style: flat;
+  transition: all 250ms ease-out;
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  transition: all 250ms ease-out;
+}
+
+/* Paper effect – slightly raised off background */
+
+.paper {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  border-color: #dedede;
+}
+
+/* Curl effects – curls corners on hover */
+
+.paper-curl:before,
+.paper-curl:after,
+.paper-curl-right:before,
+.paper-curl-right:after {
+  bottom: 12px;
+  width: 50%;
+  height: 55%;
+  max-width: 200px;
+  max-height: 100px;
+  box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.6);
+}
+
+.paper-curl:before,
+.paper-curl-right:before {
+  left: 10px;
+}
+
+.paper-curl:after,
+.paper-curl-right:after {
+  right: 10px;
+}
+
+.paper-curl:hover:before,
+.paper-curl:hover:after,
+.paper-curl-right:hover:before,
+.paper-curl-right:hover:after {
+  box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.8);
+}
+
+.paper-curl:hover:before,
+.paper-curl-right:hover:before {
+  transform: skew(-8deg) rotate(-3deg);
+}
+
+.paper-curl:hover:after,
+.paper-curl-right:hover:after {
+  transform: skew(8deg) rotate(3deg);
+}
+
+.paper-curl:hover {
+  border-radius: 0 0 40% 40% / 0 0 30% 30%;
+}
+
+.paper-curl-right:before {
+  display: none;
+}
+
+.paper-curl-right:hover {
+  border-radius: 0 0 40% 0 / 0 0 30% 0;
+}
+
+/* Curl effects – curls right hand side on hover */
+
+.paper-curl-right-side:before,
+.paper-curl-right-side:after {
+  right: 10px;
+  width: 50%;
+  height: 55%;
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.paper-curl-right-side:before {
+  top: 12px;
+  box-shadow: 1px -4px 12px rgba(31, 31, 31, 0.6);
+}
+
+.paper-curl-right-side:after {
+  bottom: 12px;
+  box-shadow: 1px 4px 12px rgba(31, 31, 31, 0.6);
+}
+
+.paper-curl-right-side:hover {
+  right: 0;
+  border-radius: 0 3% 3% 0 / 0% 50% 50% 0;
+}
+
+.paper-curl-right-side:hover:before {
+  box-shadow: 10px -4px 12px rgba(31, 31, 31, 0.8);
+  transform: skew(-8deg) rotate(-3deg);
+}
+
+.paper-curl-right-side:hover:after {
+  box-shadow: 10px 4px 12px rgba(31, 31, 31, 0.8);
+  transform: skew(8deg) rotate(3deg);
+}
+
+.letter {
+  background: #ffffff44;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  min-height: 200px;
+  position: relative;  
+  margin-left: 12px;
+}
+
+.letter:before,
+.letter:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.letter:before {
+  background: #fafafa44;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+
+.letter:after {
+  background: #f6f6f644;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
